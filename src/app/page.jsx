@@ -40,7 +40,7 @@ const FastFoodPage = () => {
     { name: 'Cheeseburger', price: 5.99, image: '/placeholder.svg?height=200&width=300' },
     { name: 'Pizza', price: 8.99, image: '/placeholder.svg?height=200&width=300' },
     { name: 'Fries', price: 2.99, image: '/placeholder.svg?height=200&width=300' },
-    { name: 'Chicken Wings', price: 7.99, image: '/placeholder.svg?height=200&width=300' },
+    { name: 'Chicken Wingss', price: 7.99, image: '/placeholder.svg?height=200&width=300' },
   ];
 
   return (
