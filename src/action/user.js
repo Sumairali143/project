@@ -30,7 +30,7 @@ try {
     console.log("Data saved");
     return {success:"Registered..."}
 } catch (error) {
-    return {error:error}
+    return {error:"Internal server error"}
 }
 }
 
