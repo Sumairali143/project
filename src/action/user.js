@@ -2,6 +2,7 @@
 "use server";
 
 import prisma from "@/lib/db";
+import bcrypt from "bcryptjs"
 
 export async function signupUser(name, email, password) {
 try {
@@ -17,12 +18,13 @@ try {
     if (existingUser) {
         throw new Error("User already exists...");
     }
+    const hashPassword = await bcrypt.hash(password, 10);
 
     await prisma.user.create({
         data:{
             name,
             email,
-            password
+            password:hashPassword
         }
     })
     console.log("Data saved");
