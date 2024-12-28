@@ -4,7 +4,8 @@
 import prisma from "@/lib/db";
 
 export async function signupUser(name, email, password) {
-
+try {
+    
     if (!name || !email || !password) {
         throw new Error("All fields are required");
     }
@@ -26,6 +27,9 @@ export async function signupUser(name, email, password) {
     })
     console.log("Data saved");
     return {success:"Registered..."}
+} catch (error) {
+    return {error:error}
+}
 }
 
 export async function loginUser(formData){
