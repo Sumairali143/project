@@ -25,6 +25,7 @@ export async function signupUser(name, email, password) {
         }
     })
     console.log("Data saved");
+    return {success:"Registered..."}
 }
 
 export async function loginUser(formData){
